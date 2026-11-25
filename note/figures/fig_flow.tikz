@@ -11,7 +11,7 @@
 \node[box] (etf) at (0,-1.8) {Prop.~3.1: the two-graph $\Omega$ on $496$ points, eigenvalues $33$, $-15$};
 \node[box, fill=pA!12] (thm) at (0,-3.6) {\textbf{Theorem 4.1}: $\srg(496,231,102,112)$};
 \node[comp=4.0cm] (rec) at (0,-5.4) {Lemma 5.1: $\Omega$ determines the cells, the design and the labels (finite check)};
-\node[box, fill=pA!12] (cnt) at (0,-7.4) {\textbf{Theorem 5.2}: more than $7.06\cdot10^{107}$ classes in each of the three rows};
+\node[box, fill=pA!12] (cnt) at (0,-7.4) {\textbf{Theorem 5.2}, Prop.~5.3: more than $3.43\cdot10^{110}$ classes in each of the three rows};
 % left column
 \node[comp] (more) at (-4.6,0) {Remark 2.2: two more starters (search); three designs, $|\Aut|=84$};
 \node[comp] (sp) at (-4.6,-5.4) {Prop.~7.1: not the symplectic two-graph};
@@ -29,7 +29,11 @@
 \draw[arr] (oth.south west) -- (cnt.north east);
 \draw[arr, dashed] (rec) -- (sp);
 \draw[arr, dashed] (rk) -- (cnt);
+\node[comp] (had) at (-4.6,-9.2) {five Hadamard matrices at $\infty$ (Prop.~5.3)};
+\node[comp] (stc) at (4.6,-7.4) {Prop.~8.1: $>5\cdot10^{86}$ completions to $976$ points};
+\draw[arr, dashed] (had) -- (cnt.south west);
+\draw[arr, dashed] (cnt) -- (stc);
 % legend
-\node[box=2.0cm, inner sep=3pt, font=\scriptsize] (lg1) at (-1.3,-9.0) {proved in the text};
-\node[comp=3.0cm, inner sep=3pt, font=\scriptsize] at (1.6,-9.0) {rests on a computation};
+\node[box=2.0cm, inner sep=3pt, font=\scriptsize] (lg1) at (-1.3,-10.8) {proved in the text};
+\node[comp=3.0cm, inner sep=3pt, font=\scriptsize] at (1.6,-10.8) {rests on a computation};
 \end{tikzpicture}

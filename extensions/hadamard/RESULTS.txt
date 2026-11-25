@@ -1,0 +1,227 @@
+A FIXED STRONGLY REGULAR SUBGRAPH WITH MANY STRONGLY REGULAR COMPLETIONS
+25 November 2026
+
+There are more than 3.42417 × 10^110 switching classes on 496 vertices
+outside the earlier Walsh half-frame family. Each gives ordinary graphs
+with parameters (496,231,102,112), (496,240,120,112) and (495,238,109,119).
+For one fixed labeled degree-240 graph, there are at least ceil(30^60/84)
+pairwise switching-inequivalent parents at order 976. Each has an ordinary
+degree-480 representative containing this very same labeled induced graph.
+Complementing the induced graph and switching gives its degree-231 mate.
+
+The row (496,231,102,112) is marked '?' in Brouwer's online table and
+was already realized in srg496. The contribution here is the extension,
+its multiplicity and a way to distinguish the resulting graphs. The
+general Steiner equiangular-frame construction already allows arbitrary
+Hadamard matrices at different points. The restriction to a regular
+induced subgraph of this type and the proofs of inequivalence are essential.
+
+1. The two frames
+
+Use any of the three Steiner 2-(61,5,1) designs in
+../starters. The marked point has 15 blocks
+through it, each containing a part of four ordinary points. The other
+168 blocks are the six symbol stars in each of 28 copies of T(6). Each
+ordinary point occurs as a pair {a,b} in seven tiles. Index the frame
+rows by the 183 blocks. Write chi_c(x)=(-1)^(c dot x) on F_2^3.
+
+At the marked point install all 16 columns of a normalized real Hadamard
+matrix of order 16 with its all-ones row deleted. The 15 remaining rows
+are indexed by the parts. At each ordinary point install two groups of
+eight columns. Their group-block coordinates are respectively +1 and -1.
+For the tile with pair a<b the coordinates of the first group are
+eps_t chi_c(x)(e_a-e_b), and those of the second are chi_d(x)(e_a+e_b).
+Choose bijections from the seven flags to the seven nonzero characters,
+independently for the two groups. In the first group follow the earlier
+crossing-flag condition in ../PROOF.md. The three quiet
+flags at each long point are a line in its Fano plane, and the product
+of the four crossing signs oriented to the marked side is -1.
+build.py gives an explicit choice in every example.
+
+At an ordinary point the 15 rows are orthogonal and orthogonal to the
+missing constant row: the two signed copies of a character on one flag
+cancel between the two groups, distinct flags are orthogonal in both.
+Each block contains five points and each local row has squared norm 16.
+Thus FF^t=80I. Columns have norm squared 15, and distinct columns have
+inner product ±1, from the truncated Hadamard in one fiber or the unique
+common block between fibers. The full Seidel matrix S=F^t F-15I has
+eigenvalues 65,-15.
+
+Retain all 16 marked columns and the first eight at every ordinary point.
+Call this submatrix B. On the group rows BB^t=48I. Each tile contributes
+8 times the Laplacian of K6 on its six rows, with nonzero eigenvalue 48.
+All cross terms vanish by character orthogonality. Thus its Seidel
+eigenvalues are 33,-15. This calculation uses only orthogonality at the
+marked point. Take z equal to 1 at the last group row and 1/2 at the two
+marked symbols of every tile, with all other entries zero. The signs
+B^t z are a Hadamard row on the marked fiber. On long fibers the four
+crossing characters have product -1 after orientation and sum to ±2.
+On short fibers the group coordinate gives ±1. Thus B^t z is a sign
+eigenvector for eigenvalue 33, since B^t BB^t=48 B^t. Switching by
+this word and taking negative entries gives the degree-231 graph.
+
+The same kernel signing works simultaneously on the two frames. Use +1
+on all marked columns. Within each part give two entire ordinary fibers
+sign +1 and two sign -1, on each group of eight. The constant group sums
+cancel and the nonconstant characters sum to zero. The signed full
+Seidel matrix has row sum -15, as does its restriction. Its positive
+entries give the degree-480 parent and the degree-240 induced graph.
+Isolating and deleting a vertex in the negative Seidel orientation gives
+the descendants (975,462,205,231) and (495,238,109,119). Taking the
+same root in the 496-subgraph gives a literal induced 495-vertex
+subgraph inside the 975-vertex descendant. Since each descendant
+recovers its parent two-graph, the same fixed 495-vertex graph is
+induced in at least ceil(30^60/84) inequivalent 975-vertex graphs.
+
+2. Recognizing the new half-frames
+
+Use four distinct rows of S-I whose componentwise product is constant.
+This is invariant under switching and relabeling. The finite unsigned
+starter checks in ../starters/recover.py continue to
+exclude mixed quadruples. The slope test on an ordinary point is
+unchanged. For three odd ordinary cells in one part plus a special point,
+the product on the special fiber is a nonconstant Hadamard row. For four
+odd cells in one part the old sign discrepancy persists. For two pairs
+the special pair still has support a union of parts, and an ordinary
+pair has one of 2,100 distinct supports, none of them a union of parts.
+Consequently admissible quadruples occur only inside a cell. Each
+ordinary cell gives 14. On the marked cell we read the four-column
+relations of its normalized Hadamard matrix (sum zero in binary).
+
+The five choices in hadamards.json have the following invariants in order.
+The last column is the order of the permutation group on columns
+preserving the fifteen unordered pairs of complementary half-blocks.
+
+  class     four-sets    component sizes    group order
+    0          140            16              322560
+    1           76            16                9216
+    2           44            16                1536
+    3           28             8,8              2688
+    4           28            16                2688
+
+matrices.py obtains the matrices by closed-quadruple switches and
+canonicalizes the pointed incidence structures. The equivalence and
+pointed classes were also checked on every possible distinguished row
+of McKay's five representatives by rectangles.py in the work directory reciprocal_rows_20261125 (not included).
+The numbers of four-sets in the half-frames are 980,916,884,868,868.
+
+In class 3, identify both special components even though they have size
+eight. Normalize the internal sign matrix of each component D to -J.
+This fixes switching on D up to a common sign. From any special vertex
+the pattern on every other component D is constant in this normalization.
+An ordinary vertex sees a nonconstant character on any ordinary fiber
+outside its part. This identifies the two special components, which are
+then merged. In all other cases the special component is the unique
+16-cell. Its 15 projective row directions recover the parts. Taking the
+special direction as reference on each ordinary cell recovers the seven
+flags, the T(6) tiles, and their six stars by the earlier proof. Thus the
+three designs can be distinguished from the abstract two-graph.
+
+Count 15! assignments of the marked Hadamard rows to labeled parts,
+6^56 × 30^4 ordinary flag structures and 2^364 flag sign choices. For a
+given source, an isomorphism can induce at most 84 design permutations.
+On the special fiber its switching is constant in the raw coordinates
+(the internal sign matrix is -J), so its column permutation preserves
+the 15 complementary row pairs. Each such permutation determines the
+target row assignment. On ordinary fibers the prescribed flags fix the
+linear action and leave at most 8 translations per fiber. Remaining
+phase freedom is at most 2^(28-r) where r=22,19,19 on the three designs,
+by the crossing parity argument of ../PROOF.md. For a
+special group of order a this gives the lower bound
+
+  [6^56 × 30^4 × 15! × 2^364 /(84 × a × 8^60)] × sum_designs 2^(r-28).
+
+The four new weights relative to the old lower bound are 35,210,120,120.
+They give 485 times the old bound in classes disjoint from the old
+construction. The five types together give more than 3.43123 × 10^110.
+The inequality applies separately to each of the three ordinary graph
+parameter sets since a descendant determines its parent two-graph.
+
+3. Many parents of exactly the same labeled graph
+
+Fix the first design, marked matrix of class 4, and every first group.
+At each ordinary point the second group can carry any of 7!/168=30 Fano
+planes on its seven named flags. The first 496 columns are identical
+for all 30^60 choices. To bound identification of the parents we recover
+the choices from their full two-graphs.
+
+First exclude four-sets supported on different point fibers. With two
+odd fibers, evaluate on one of them. The contribution of the other is a
+nonconstant row, while every even fiber contributes zero projective
+direction. With four distinct points on a block, evaluate on one of
+those four. With just three on a block use another point of that block
+outside the four. With no three on a block, choose a further point of
+the block of the first two away from the block of the last two. In the
+latter two cases two distinct Hadamard directions survive. For a pair
+of columns at p its row difference has support the 32 other design
+points on eight of the fifteen blocks through p (constant on each point
+fiber). Two such 32-sets cannot be complements in 61 points. Equality
+for fibers p and q excludes the common block pq from either pencil.
+Form the bipartite graph of the other 14 pencil blocks at p and q,
+joining intersecting blocks. Equality requires the selected blocks to
+be a union of components. recovery.py checks connectivity for every
+one of the 1,830 pairs on each of the three designs. Hence the full
+four-set hypergraph too is a disjoint union of local hypergraphs.
+
+Each ordinary fiber contributes 14 planes in each half. A cross plane
+contains two columns per half (the group row enforces even parity).
+A pair difference in each half is one of the seven nonzero words of a
+binary simplex code on the flags, each realized by four pairs. Thus if
+the two simplex codes intersect in dimension d there are
+28+16(2^d-1) four-sets. For d=0 these form two separate 8-components.
+For d>0 the halves are connected and there are 44,76,140 four-sets.
+The special fiber is the unique connected 16-cell with just 28
+four-sets. This survives arbitrary local Fano choices.
+
+Projective patterns on that special fiber recover the fifteen parts.
+For each part, merge two 8-components precisely when their projective
+directions on every component outside the part agree. For true twins
+the joining block at each outside point is the same. For false twins
+recovery.py finds 48 or 56 outside points at which different tile
+flags occur, for each of the 90 same-part pairs. Distinct flags give
+distinct directions even on a single half. With all 61 fibers
+recovered, at any p the other fibers fall into 15 projective row
+directions, giving its blocks of size five. This recovers the design.
+
+For completeness the row through the special point splits an ordinary
+16-cell into its two halves. First normalize switching on this whole
+cell using its internal -J matrix. Each restriction of the remaining
+14 rows gives seven distinct directions, in pairs, on either half.
+Three directions multiply to a constant exactly on a Fano line. Hence
+the two Fano structures on the paired flags are determined up to swapping
+the two halves. A specified design permutation acts on the fourteen
+pencil blocks and their pairs, so it prescribes the unordered pair of
+Fano structures in the target. One member of that pair is the already
+fixed first Fano plane. This determines the second one, even if the two
+are equal. At most 84 labeled assignments are equivalent. Therefore
+the number of parent two-graphs, and of ordinary degree-480 parents, is
+at least ceil(30^60/84) > 5.04656 × 10^86. These parents have at most
+28+60×140=8428 four-sets, fewer than the 61×140 local ones present in
+any all-Walsh full Steiner (61,5) frame.
+
+4. Explicit witnesses and reproduction
+
+graphs/mixed_all_976_480.g6 uses each of the thirty second-half systems
+twice. Its first 496 vertices induce graphs/mixed_all_496_240.g6.
+graphs/mixed_all_496_231.g6 is its switched complement. The parent
+contains 3052 four-sets and its design is recovered from graph6 alone.
+The same first 496 graph is shared by d0_h4_976_480.g6.
+
+Run matrices.py, build.py, recovery.py and audit.py in the srg environment.
+audit.tsv lists the SHA-256 digest of each ordinary graph, the number of
+pairs checked and switching invariants where applicable. audit.py uses
+a separate graph6 decoder and checks degrees and all common-neighbor
+counts for 75 files, along with all 15 induced-subgraph, switching and
+descendant chains. Some of the 75 files deliberately encode the same
+subgraph. Four full parents are subjected to recognition after further
+switching and relabeling, with canonical design certificates checked
+against the stored starters. recovery.out contains the exact integers.
+
+References
+Brouwer, parameter table for 451-500 vertices and 951-1000 vertices.
+https://aeb.win.tue.nl/graphs/srg/srgtab451-500.html
+https://aeb.win.tue.nl/graphs/srg/srgtab951-1000.html
+Fickus, Mixon and Tremain, Steiner equiangular tight frames. https://arxiv.org/abs/1009.5730
+McKay, Hadamard matrices, order 16. https://users.cecs.anu.edu.au/~bdm/data/hadamard.html
+Orrick, Switching operations for Hadamard matrices. https://arxiv.org/abs/math/0507515
+The earlier half-frame and unsigned starter checks are in ../PROOF.md.

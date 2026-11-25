@@ -4,6 +4,7 @@ set -euo pipefail
 cd "$(dirname "$0")"
 PY=${PYTHON:-python}
 export OMP_NUM_THREADS=${OMP_NUM_THREADS:-8}
+export MPLCONFIGDIR=${MPLCONFIGDIR:-$(mktemp -d)}
 echo "== graph files"
 (cd graphs && sha256sum -c SHA256SUMS)
 echo "== original constructor and standard-library audit (seed/)"
@@ -27,6 +28,9 @@ $PY template/scan_template.py > /dev/null && echo "scan_template OK"
 echo "== three designs, random members in all rows, recovery under switching, the lower bound"
 (cd extensions && $PY designs_audit.py)
 (cd extensions && sha256sum -c SHA256SUMS)
+echo "== five Hadamard matrices at infinity, and the 976-point Steiner completion"
+(cd extensions/hadamard && $PY independent_hadamard.py)
+(cd extensions/hadamard && $PY audit.py | tail -1)
 echo "ALL CHECKS PASSED"
 # Longer runs:
 #   python seed/symmetry.py             # |Aut| = 4 (nauty and bliss)

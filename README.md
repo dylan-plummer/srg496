@@ -6,9 +6,10 @@ Graphs, code and a short note (`note/srg496.pdf`) for the results below (Dylan P
 
 | parameters | status in Brouwer's table (checked 24 Nov 2026) | here |
 |---|---|---|
-| srg(496, 231, 102, 112) and complement (496, 264, 144, 136) | open (`?`, "2-graph?") | more than 7.06 · 10^107 pairwise non-isomorphic graphs (lower bound, three designs) |
+| srg(496, 231, 102, 112) and complement (496, 264, 144, 136) | open (`?`, "2-graph?") | more than 3.43 · 10^110 pairwise non-isomorphic graphs (lower bound, three designs, five Hadamard matrices) |
 | srg(496, 240, 120, 112) and complement (496, 255, 126, 136) | known (Wallis; NO⁺(10,2)) | the same lower bound; exactly 554,146,599,744 classes in one explicit subfamily |
 | srg(495, 238, 109, 119) | known (O⁻(10,2), Mathon) | the same lower bound (descendants) |
+| srg(976, 480, 248, 224) | known (Wallis) | more than 5.04 · 10^86 non-isomorphic graphs containing one fixed labeled srg(496,240,120,112) as an induced subgraph |
 
 - **Tiling.**
   - One starter under Z7 × 𝔽₂² decomposes K_{15×4} into 28 copies of T(6). Two sheets have 28 points, one has 4,
@@ -61,6 +62,21 @@ Graphs, code and a short note (`note/srg496.pdf`) for the results below (Dylan P
     tile reversals allowed by the crossing matrix (GF(2) rank 22 on the first design, 19 on the others).
   - Without that last refinement the bound is still 4.03 · 10^101.
   - Every member's automorphism group fixes the 16-point special cell, so no member's two-graph is transitive.
+- **Other Hadamard matrices (25 Nov).**
+  - The 16 columns at the added point can come from any normalized Hadamard matrix of order 16. There are five up
+    to equivalences fixing the all-ones row.
+  - Their special-cell four-set counts are 140, 76, 44, 28 and 28. Their column groups have orders 322560, 9216,
+    1536, 2688 and 2688.
+  - The bound grows by the factor 1 + 35 + 210 + 120 + 120 = 486, to more than 3.43 · 10^110 (note,
+    Proposition 5.3).
+- **Steiner completion (25 Nov).**
+  - At each point, add a second group of 8 columns, with −1 on the part row and χ(x)(e_a + e_b) in the tiles.
+    This gives the full Steiner frame on 976 points, with Seidel eigenvalues 65 and −15.
+  - The kernel word gives srg(976,480,248,224), whose first 496 vertices induce the srg(496,240,120,112).
+    Descendants are srg(975,462,205,231). Both rows are known.
+  - The 30^60 choices of the second Fano planes give at least ⌈30^60/84⌉ > 5.04 · 10^86 inequivalent parents of
+    one fixed labeled half (note, Proposition 8.1).
+  - Data and checks are in `extensions/hadamard/`.
 - **Symmetric members.** On the first design, nine two-graphs have automorphism group of order 84.
   - They give 56 pairwise non-isomorphic srg(496,231,102,112) by cuts, with |Aut| in {2, 12, 14, 84}.
   - They have 126 descendant classes, with |Aut| in {1, 3, 12, 21, 84}.
@@ -107,6 +123,8 @@ Graphs, code and a short note (`note/srg496.pdf`) for the results below (Dylan P
     the Burnside count.
   - `designs_audit.py` (ours) checks the designs, the GF(2) ranks, random members of all three designs in all
     three rows, recovery under random switching, the Fano count and the bound.
+  - `hadamard/`: the five Hadamard matrices, the 976-point completion, 75 example graphs, the companion audit and
+    recovery checks, and our `independent_hadamard.py`.
   - `seeds_audit.py` (ours) checks, with nauty, that the raw group and the two-graph group have order 84, the 126
     descendant classes, every exported graph, and the Burnside count recomputed from the nauty group.
 - `note/`: `srg496.tex` and `srg496.pdf`.

@@ -1,0 +1,10 @@
+unpointed found 2
+unpointed found 3
+unpointed found 5
+unpointed found 5
+unpointed found 5
+{'pointed': 0, 'unpointed': 0, 'row': 0, 'order': 322560, 'planes': 140, 'plane_degrees': [35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35], 'components': [16]}
+{'pointed': 1, 'unpointed': 1, 'row': 0, 'order': 9216, 'planes': 76, 'plane_degrees': [19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19], 'components': [16]}
+{'pointed': 2, 'unpointed': 2, 'row': 0, 'order': 1536, 'planes': 44, 'plane_degrees': [11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11], 'components': [16]}
+{'pointed': 3, 'unpointed': 3, 'row': 0, 'order': 2688, 'planes': 28, 'plane_degrees': [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], 'components': [8, 8]}
+{'pointed': 4, 'unpointed': 4, 'row': 0, 'order': 2688, 'planes': 28, 'plane_degrees': [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], 'components': [16]}
