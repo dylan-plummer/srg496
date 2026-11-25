@@ -1,0 +1,12 @@
+design00: S(2,5,61) ok, block file agrees, |Aut(design)| = 84, orbit of the added point has size 1, crossing rank 22
+  member 0: 231 {-17: 154, 7: 341, 231: 1}, 240[constant] ok, 240[character] ok, 495 descendant ok, switched+relabelled zero-sum 4-sets 980, inside cells 980
+  member 1: 231 {-17: 154, 7: 341, 231: 1}, 240[constant] ok, 240[character] ok, 495 descendant ok
+design01: S(2,5,61) ok, block file agrees, |Aut(design)| = 84, orbit of the added point has size 1, crossing rank 19
+  member 0: 231 {-17: 154, 7: 341, 231: 1}, 240[constant] ok, 240[character] ok, 495 descendant ok, switched+relabelled zero-sum 4-sets 980, inside cells 980
+  member 1: 231 {-17: 154, 7: 341, 231: 1}, 240[constant] ok, 240[character] ok, 495 descendant ok
+design02: S(2,5,61) ok, block file agrees, |Aut(design)| = 84, orbit of the added point has size 1, crossing rank 19
+  member 0: 231 {-17: 154, 7: 341, 231: 1}, 240[constant] ok, 240[character] ok, 495 descendant ok, switched+relabelled zero-sum 4-sets 980, inside cells 980
+  member 1: 231 {-17: 154, 7: 341, 231: 1}, 240[constant] ok, 240[character] ok, 495 descendant ok
+three designs pairwise non-isomorphic: True
+Fano structures on 7 points: 30, with a prescribed line: 6
+lower bound = 7.0602e+107 (log10 107.849); without the tile refinement 4.0399e+101

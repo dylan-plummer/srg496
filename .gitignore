@@ -1,0 +1,6 @@
+__pycache__/
+note/*.aux
+note/*.log
+note/*.out
+*.npy
+*.pkl

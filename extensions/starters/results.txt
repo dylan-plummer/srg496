@@ -1,0 +1,4 @@
+design00 old design True starters 72 design group 84 graph group 4 graph certificate d7e2f6b1848621f1f33a1e99ba93957a737d53e51dbc9cd08ecf4a2532b758cb
+design01 old design False starters 72 design group 84 graph group 4 graph certificate 728b286e4a8b9c16b897b50f90b891bc26d9d48de028fb45fe1533187c04e6a7
+design02 old design False starters 72 design group 84 graph group 4 graph certificate 91a9a4a1c733021ee7edd9a8344061d7b82642bdf928a0272f43d5fd3b7f4b94
+distinct designs 3 total normalized starters 216

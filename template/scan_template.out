@@ -1,0 +1,13 @@
+  P   m     S(2,k,V)      N  rank  rho1  rho2  members
+  3   3     S(2,2,4)     10     5     3    -3  (10, 3, 0, 1)[!] Petersen graph; NO–(4,2); NO–,orth(3,5); | (10, 6, 3, 4)[!] Triangular graph T(5); 2-graph
+  3   4     S(2,3,7)     16     6     5    -3  (16, 5, 0, 2)[!] q222=0; vanLint-Schrijver(1); VO–(4,2) a | (16, 9, 4, 6)[2!] OA(4,3); Bilin2x2(2); vanLint-Schrijver(
+  7   3     S(2,2,8)     36    21     5    -7  (36, 15, 6, 6)[32548!] complete enumeration by McKay & Spence;  | (36, 21, 12, 12)[180!] 2-graph
+  7   4    S(2,3,15)     64    28     9    -7  (64, 27, 10, 12)[+] Mesner; from a unital: projective 4-ary  | (64, 35, 18, 20)[+] OA(8,5); Wallis2 (AR(2,2)+S(2,2,8)); Goe
+  7   7    S(2,6,36)    148    37    21    -7  (148, 63, 22, 30)[?] 2-graph? | (148, 77, 36, 44)[+] switched Brady graph; 2-graph
+ 15   3    S(2,2,16)    136    85     9   -15  (136, 63, 30, 28)[+] NO–(8,2); 2-graph | (136, 75, 42, 40)[+] NO+(5,4); from ETF Fickus et al.; 2-grap
+ 15   4    S(2,3,31)    256   120    17   -15  (256, 119, 54, 56)[+] VO–(8,2) affine polar graph; projective  | (256, 135, 70, 72)[+] OA(16,9); Wallis2 (AR(2,4)+S(2,2,16)); G
+ 15   6    S(2,5,61)    496   155    33   -15  (496, 231, 102, 112)[?] 2-graph? | (496, 255, 126, 136)[+] NO+(10,2); Goethals-Seidel(3,15); pg(15,
+ 15   7    S(2,6,76)    616   165    41   -15  (616, 287, 126, 140)[?] 2-graph? | (616, 315, 154, 168)[?] 2-graph?
+ 31   3    S(2,2,32)    528   341    17   -31  (528, 255, 126, 120)[+] NO–(10,2); Muzychuk S2 (r=4); 2-graph | (528, 279, 150, 144)[+] 2-graph
+ 31   4    S(2,3,63)   1024   496    33   -31  (1024, 495, 238, 240)[+] CK - RT3: projective 4-ary [165,5] code  | (1024, 527, 270, 272)[+] OA(32,17); Wallis2 (AR(2,8)+S(2,2,32)); 
+ 39   3    S(2,2,40)    820   533    21   -39  (820, 399, 198, 190)[+] 2-graph | (820, 429, 228, 220)[+] from ETF Fickus et al.; 2-graph

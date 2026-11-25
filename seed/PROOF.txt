@@ -1,0 +1,148 @@
+A strongly regular graph with parameters (496,231,102,112)
+24 November 2026
+
+The fifteen entries in starter.tsv construct a graph on 496 vertices
+and its complement with parameters (496,264,144,136). The construction
+gives a regular switching of a real equiangular tight frame of rank 155.
+Brouwer lists the degree-231 row with a question mark.
+https://aeb.win.tue.nl/graphs/srg/srgtab451-500.html
+
+1. A decomposition on 60 points
+
+Let G = Z/7 x F_2^2. Encode (a,b) as 4a+b, with the two bits of b
+encoding its binary coordinates. Take two copies of G, called sheets 0
+and 1, and one copy of F_2^2, called sheet 2. The three sheets have
+28, 28 and 4 points. Give each long sheet seven parts according to the
+first coordinate, and take the short sheet as the fifteenth part.
+G translates the long sheets regularly and acts on the short sheet by
+its binary coordinate.
+
+The following data assign a point to each edge of K6. An entry is the
+sheet followed by the encoded position.
+
+ edge   01   02   03   04   05   12   13   14   15   23   24   25   34   35   45
+ sheet   2    0    1    1    1    1    0    0    0    1    1    1    0    0    0
+ pos     0    0    5   10   19    0    9   18    7   13   26   23    4   16    8
+
+Join points whose K6 edges share an endpoint. Translate this copy of T(6)
+by all 28 elements of G. These tiles decompose the complete 15-partite
+graph with parts of size four. Here is a difference certificate.
+
+* In each long sheet, take same-sheet differences up to sign and use
+  the smaller encoded value. The starter supplies each of 4,...,15
+  once. These represent all 12 allowed classes.
+* From sheet 0 to sheet 1, all 28 differences occur once.
+* From each long sheet to the short one, all four binary differences
+  occur once.
+* There is only one short-sheet point in a tile.
+
+Every base edge has trivial translation stabilizer. For a same-sheet
+edge this follows because its two Z/7 coordinates differ. Thus the
+60 classes account for all 28 x 60 = 1680 base edges. A point occurs
+in seven tiles, since its base degree is 56 and each tile supplies
+eight neighbors there.
+
+2. The frame
+
+Use fifteen orthonormal group coordinates g_0,...,g_14, with g_14 for
+the short sheet, and a separate six-coordinate Euclidean space for every
+tile. In a tile the label ab denotes the root e_a-e_b for a<b. Write
+chi_j(x)=(-1)^(j dot x) for binary Walsh characters, with bitwise dot
+product modulo two.
+
+First form sixteen columns indexed by x in F_2^4. Their group coordinates
+are chi_1(x),...,chi_15(x), and their tile coordinates are zero.
+For each of the 60 base points p, form eight columns indexed by x in
+F_2^3. A column has value one in the group coordinate of p. In each
+of its seven incident tiles put chi_j(x) times the root for p, allowing
+a fixed sign on that root. Assign the seven distinct nonzero characters
+to the seven tiles. All other entries are zero. This gives a real
+183 by 496 matrix F.
+
+Every column has squared norm 15. Two distinct columns at the same
+ordinary point have inner product 1+2(-1) = -1. Distinct special
+columns have inner product -1. For two different points in the same
+part the only contribution is their common group coordinate. For points
+in different parts exactly one tile contributes a nonzero inner product.
+Its two roots have inner product +1 or -1. A special column and an
+ordinary column also have inner product +1 or -1.
+
+Walsh orthogonality makes FF^T block diagonal. Each group coordinate
+has squared row norm 16+4 x 8 = 48. The block on one tile is
+8 times the sum of (e_a-e_b)(e_a-e_b)^T over the edges of K6,
+which is 8(6I-J). Its five nonconstant directions have eigenvalue 48.
+Consequently F has rank 15+28 x 5 = 155. The Seidel matrix
+S = F^T F - 15I has eigenvalues 33 and -15 with multiplicities 155
+and 341.
+
+3. A sign vector in the 33-eigenspace
+
+Mark symbols 0 and 1 in every K6. The eight edges crossing the cut
+{0,1} | {2,3,4,5} have four positions on each long sheet. The short
+position is 01. By translation each long-sheet point crosses in four
+of its seven tiles, and a short-sheet point crosses in zero.
+
+At a long-sheet point, assign its four crossing flags characters
+4,5,6,7 and the other three flags characters 1,2,3. Sort each set by
+tile number for the exported example. Orient the first three crossing
+roots toward the same sign on the marked side, and reverse the last.
+Specifically use e_a-e_b for a<b on all flags except a crossing flag
+with character 7, where the sign is reversed. At a short-sheet point
+use characters 1,...,7 in tile order, with positive root signs.
+
+Let z have value one on g_14, zero on the other group coordinates,
+and value 1/2 on coordinates 0,1 in every tile, zero elsewhere.
+The values of w=F^T z at a special and a short-sheet column are
+chi_15(x) and 1, respectively. At a long-sheet column the value is
+
+             (chi_4(x)+chi_5(x)+chi_6(x)-chi_7(x))/2.
+
+This is always +1 or -1. Indeed 4 xor 5 xor 6 xor 7 = 0, so the four
+terms with the displayed signs have product -1. Since F^T F acts as
+48 on the image of F^T, we have S w = 33 w.
+
+Let D=diag(w). Then T=DSD has constant row sum 33. Its negative entries
+give the adjacency matrix A=(J-I-T)/2 with degree 231. On the orthogonal
+complement of the constants its eigenvalues are 7 and -17. Equivalently
+
+                    A^2 = 119 I - 10 A + 112 J.
+
+Thus two adjacent vertices have 102 common neighbors and two
+nonadjacent vertices have 112. The complement has degree 264 and
+common-neighbor counts 144 and 136.
+
+4. The supporting Steiner design and the earlier switching obstruction
+
+Adjoin a point numbered 60. Each part of size four together with
+this point gives one block. In each translated tile take the five
+labels incident with each of the six K6 symbols. These 28 x 6 blocks
+and the 15 part blocks give a Steiner 2-(61,5,1) design. Pair coverage
+follows directly from the tile decomposition. The export uses labels
+0,...,60, one block per line. We make no novelty claim for the design
+in isolation.
+
+The distinction from the campaign's earlier 496 obstruction matters.
+That obstruction applies to the full Steiner two-graph from an
+S(2,3,31). The frame here uses the 61-point design, sixteen columns
+at one point and eight at every other point. Its row-space sign vector
+is explicit above. The different switching behavior also distinguishes
+its two-graph from every S(2,3,31) Steiner two-graph subject to that
+obstruction.
+
+5. Verification
+
+Run python construct.py in the srg environment, followed by python
+audit.py. The first program verifies the exact integer Gram and
+adjacency identities and writes both graph6 files and the Steiner
+design. The second uses only the Python standard library. It decodes
+both graph6 files, intersects the neighborhoods of all 122760 vertex
+pairs, checks complementation, reconstructs every edge from the starter
+using sparse inner products, and independently regenerates the blocks.
+File hashes and pair histograms are recorded in audit.out.
+
+The optional symmetry.py computes the full automorphism group of the
+uncolored graph using nauty and bliss. Both give order four. All three
+nonidentity elements have order two, so the group is C2 x C2. It fixes
+16 vertices and has 120 further orbits of size four. The standard-library search_starter.py
+regenerates the witness by cycling the symbols 3,4,5 and extending
+partial label assignments until all sixty difference classes occur.

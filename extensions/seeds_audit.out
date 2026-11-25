@@ -1,0 +1,13 @@
+seed 00: raw group 84, exported 231 graph equal to switch(make): True, root orbits 14 sizes [1, 1, 4, 7, 7, 28, 28, 28, 28, 28, 84, 84, 84, 84], two-graph group 84, Burnside (constant, character) = (5597441480, 55974402936)
+seed 01: raw group 84, exported 231 graph equal to switch(make): True, root orbits 14 sizes [1, 1, 4, 7, 7, 28, 28, 28, 28, 28, 84, 84, 84, 84], two-graph group 84, Burnside (constant, character) = (5597441480, 55974402936)
+seed 02: raw group 84, exported 231 graph equal to switch(make): True, root orbits 14 sizes [1, 1, 4, 7, 7, 28, 28, 28, 28, 28, 84, 84, 84, 84], two-graph group 84, Burnside (constant, character) = (5597441480, 55974402936)
+seed 10: raw group 84, exported 231 graph equal to switch(make): True, root orbits 14 sizes [1, 1, 4, 7, 7, 28, 28, 28, 28, 28, 84, 84, 84, 84], two-graph group 84, Burnside (constant, character) = (5597441480, 55974402936)
+seed 11: raw group 84, exported 231 graph equal to switch(make): True, root orbits 14 sizes [1, 1, 4, 7, 7, 28, 28, 28, 28, 28, 84, 84, 84, 84], two-graph group 84, Burnside (constant, character) = (5597441480, 55974402936)
+seed 12: raw group 84, exported 231 graph equal to switch(make): True, root orbits 14 sizes [1, 1, 4, 7, 7, 28, 28, 28, 28, 28, 84, 84, 84, 84], two-graph group 84, Burnside (constant, character) = (5597441480, 55974402936)
+seed 20: raw group 84, exported 231 graph equal to switch(make): True, root orbits 14 sizes [1, 1, 4, 7, 7, 28, 28, 28, 28, 28, 84, 84, 84, 84], two-graph group 84, Burnside (constant, character) = (5597441480, 55974402936)
+seed 21: raw group 84, exported 231 graph equal to switch(make): True, root orbits 14 sizes [1, 1, 4, 7, 7, 28, 28, 28, 28, 28, 84, 84, 84, 84], two-graph group 84, Burnside (constant, character) = (5597441480, 55974402936)
+seed 22: raw group 84, exported 231 graph equal to switch(make): True, root orbits 14 sizes [1, 1, 4, 7, 7, 28, 28, 28, 28, 28, 84, 84, 84, 84], two-graph group 84, Burnside (constant, character) = (5597441480, 55974402936)
+126 distinct descendants over the nine seeds; Burnside total 554,146,599,744 (per seed 61,571,844,416)
+all_496_231: 56 srg, pairwise non-isomorphic, |Aut| distribution [(2, 9), (12, 18), (14, 11), (84, 18)], all in the nine two-graphs
+all_495_238: 126 srg, = the 126 descendant classes, |Aut| distribution [(1, 36), (3, 45), (12, 18), (21, 9), (84, 18)]
+individual 496_240_*, 495_238_* files: srg, and in the nine two-graphs

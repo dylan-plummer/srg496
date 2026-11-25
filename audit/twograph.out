@@ -1,0 +1,11 @@
+frame two-graph Seidel spectrum {-15: 341, 33: 155}
+symplectic two-graph Seidel spectrum {-33: 155, 15: 341}
+symplectic descendant at point 0: |Aut| = 5.00308e+13, orbits 1
+frame descendant at column 0: |Aut| = 4.0, orbits 135
+frame descendant at column 1: |Aut| = 4.0, orbits 135
+frame descendant at column 15: |Aut| = 4.0, orbits 135
+frame descendant at column 16: |Aut| = 1.0, orbits 495
+frame descendant at column 17: |Aut| = 1.0, orbits 495
+frame descendant at column 240: |Aut| = 1.0, orbits 495
+frame descendant at column 464: |Aut| = 1.0, orbits 495
+frame descendant at column 495: |Aut| = 1.0, orbits 495

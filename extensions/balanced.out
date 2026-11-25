@@ -1,0 +1,4 @@
+Burnside fixed-word counts (constant star, character star), frequencies: [((0, 0), 56), ((8, 0), 18), ((216, 144), 6), ((32768, 0), 3), ((470184984576, 4701849845760), 1)]
+per two-graph (5597441480, 55974402936) sum 61571844416 all nine 554146599744
+All four generators preserve all nine raw matrices and degree-231 graphs.
+All 15 character choices have been checked on the first seed.

@@ -1,0 +1,31 @@
+% Figure 1: (a) one tile, (b) the labels at a long-sheet point.
+\begin{tikzpicture}[font=\small,
+  sym/.style={circle, draw, inner sep=1.5pt, minimum size=5mm, fill=white},
+  mk/.style={sym, fill=pB!35},
+  cross/.style={pA, very thick},
+  quiet/.style={gray!70, thin},
+  fp/.style={circle, draw, inner sep=1pt, minimum size=6.5mm, font=\scriptsize, fill=white},
+  fq/.style={fp, fill=pB!35},
+  fc/.style={fp, fill=pA!20}]
+% ---- (a) K6 with the cut {0,1} | {2,3,4,5}
+\begin{scope}
+  \foreach \i/\ang in {0/150,1/90,2/30,3/-30,4/-90,5/-150} \coordinate (s\i) at (\ang:1.55);
+  \foreach \a/\b in {0/1,2/3,2/4,2/5,3/4,3/5,4/5} \draw[quiet] (s\a) -- (s\b);
+  \foreach \a in {0,1} \foreach \b in {2,3,4,5} \draw[cross] (s\a) -- (s\b);
+  \node[mk] at (s0) {0}; \node[mk] at (s1) {1};
+  \foreach \i in {2,3,4,5} \node[sym] at (s\i) {\i};
+  \node at (0,-2.25) {(a) a tile: the $15$ edges of $K_6$};
+\end{scope}
+% ---- (b) Fano plane of labels at a point on a long sheet
+\begin{scope}[xshift=5.6cm, yshift=-0.25cm]
+  \coordinate (A) at (90:1.7); \coordinate (B) at (210:1.7); \coordinate (C) at (330:1.7);
+  \coordinate (AB) at ($(A)!0.5!(B)$); \coordinate (BC) at ($(B)!0.5!(C)$); \coordinate (CA) at ($(C)!0.5!(A)$);
+  \coordinate (O) at (0,0);
+  \draw[gray!70] (A) -- (BC) (B) -- (CA) (C) -- (AB) (B) -- (C) (C) -- (A);
+  \draw[gray!70] (O) circle (0.85);
+  \draw[pB!90!black, line width=1.6pt] (A) -- (B);
+  \node[fq] at (A) {001}; \node[fq] at (B) {010}; \node[fq] at (AB) {011};
+  \node[fc] at (C) {100}; \node[fc] at (BC) {110}; \node[fc] at (CA) {101}; \node[fc] at (O) {111};
+  \node at (0,-1.95) {(b) labels of the seven tiles at $p$};
+\end{scope}
+\end{tikzpicture}

@@ -1,0 +1,6 @@
+srg_496_231_102_112.g6 6853c60293b6e2aa8dde9de46b41f4e5be3e83a4bd3102f0ec98b9afa9b80ce0
+all vertex degrees 231 all unordered pairs [((0, 112), 65472), ((1, 102), 57288)]
+srg_496_264_144_136.g6 52aa37dff85da36b3542c568050c452a713bddc9b4d3195e8921f7f80fbf1732
+all vertex degrees 264 all unordered pairs [((0, 136), 57288), ((1, 144), 65472)]
+Starter regenerated every edge. The second file is the exact complement.
+Steiner 2-(61,5,1) verified on all 183 blocks and all 1830 point pairs.
